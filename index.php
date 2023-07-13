@@ -1,37 +1,35 @@
 <?php
 
-class Films {
+class Movie {
  
-   public $titolo;
-   public $genere;
-   public $regista;
+   public $title;
+   public $genre;
+   public $director;
 
-    function __construct($titolo, $genere, $regista) {
-        $this->titolo = $titolo;
-        $this->genere = $genere;
-        $this->regista = $regista;
+    function __construct($title, $genre, $director) {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->director = $director;
     }
 
     function getInfos() {
-        return $this->titolo;
-        return $this->genere;
-        return $this->regista; 
+        return "Title: " . $this->title . " , Genre: " . $this->genre . " , Director: " . $this->director . "" ;
     }
 }
 
-$film1 = new Films("Pulp Fiction", "Thriller", "Quentin Tarantino");
-$film2 = new Films("Arancia Meccanica", "Drammatico", "Stanley Kubrick");
-$film3 = new Films("This is England", "Drammatico", "Shane Meadows");
+$movie1 = new Movie("Pulp Fiction", "Thriller", "Quentin Tarantino");
+$movie2 = new Movie("Arancia Meccanica", "Drammatico", "Stanley Kubrick");
+$movie3 = new Movie("This is England", "Drammatico", "Shane Meadows");
 
 
-echo $film1->getInfos();
-var_dump($film1);
+echo $movie1->getInfos();
+var_dump($movie1);
 
-echo $film2->getInfos();
-var_dump($film2);
+echo $movie2->getInfos();
+var_dump($movie2);
 
-echo $film3->getInfos();
-var_dump($film3);
+echo $movie3->getInfos();
+var_dump($movie3);
 
 
 
